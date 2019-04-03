@@ -24,7 +24,6 @@ public class DemoDubboExceptionHandler {
     @Pointcut("@within(com.oyo.demo.dubbo.DemoService)")
     public void logPointCut() {
     }
-pwd
     @Around("logPointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         try {
