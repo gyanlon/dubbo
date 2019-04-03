@@ -6,7 +6,7 @@ import lombok.Data;
 public class BaseResponse<T> {
 
     /**
-     * 状态码 （0：成功； 1；错误）
+     * 状态码 （0: 未知； 1：成功； 2；错误）
      */
     private int status = 0;
 
@@ -18,7 +18,12 @@ public class BaseResponse<T> {
     /**
      * 返回说明
      */
-    private String message;
+    private String systemMsg;
+
+    /**
+     * 显示文案
+     */
+    private String displayMsg;
 
     /**
      * 返回结果
@@ -26,26 +31,19 @@ public class BaseResponse<T> {
     private T result;
 
 
-    public BaseResponse() { }
-
-
-    public BaseResponse(int status) {
-        this.status = status;
+    public BaseResponse(T data, ResultCode rc) {
+        result = data;
+        init(rc);
     }
 
-    public BaseResponse(int status, String message) {
-        this.status = status;
-        this.message = message;
+    public BaseResponse(ResultCode rc) {
+        init(rc);
     }
 
-    public BaseResponse(int status, T result) {
-        this.status = status;
-        this.result = result;
-    }
-
-    public BaseResponse(int status, String message, T result) {
-        this.status = status;
-        this.message = message;
-        this.result = result;
+    private void init(ResultCode rc) {
+        code = rc.getCode();
+        systemMsg = rc.getSystemMsg();
+        displayMsg = rc.getDisplayMsg();
+        status = rc.getType();
     }
 }

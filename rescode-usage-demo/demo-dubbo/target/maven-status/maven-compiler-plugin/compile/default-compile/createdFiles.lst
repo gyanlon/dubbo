@@ -1,2 +1,4 @@
 com/oyo/demo/dubbo/DemoProviderApplication.class
+com/oyo/demo/dubbo/service/impl/DemoDubboExceptionHandler.class
+com/oyo/demo/dubbo/service/impl/DemoDubboResultCode.class
 com/oyo/demo/dubbo/service/impl/DemoServiceImpl.class

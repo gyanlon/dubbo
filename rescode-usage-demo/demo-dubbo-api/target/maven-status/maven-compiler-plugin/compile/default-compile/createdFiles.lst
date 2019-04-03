@@ -1,3 +1,5 @@
+com/oyo/demo/common/ResultCodeClient.class
+com/oyo/demo/common/ResultCode.class
 com/oyo/demo/common/BaseResponse.class
 com/oyo/demo/common/BaseException.class
 com/oyo/demo/dubbo/service/DemoService.class

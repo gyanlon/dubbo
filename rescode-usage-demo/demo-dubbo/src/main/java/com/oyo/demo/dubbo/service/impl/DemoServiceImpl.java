@@ -7,28 +7,34 @@ import com.oyo.demo.dubbo.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 
 
-@Service(version="1.0.0")
+@Service(version = "1.0.0")
 @Slf4j
 public class DemoServiceImpl implements DemoService {
 
     @Override
     public BaseResponse doSuccess() {
 
-        return null;
+        // Do something
+
+        return new BaseResponse(DemoDubboResultCode.SUCCESS);
     }
 
     @Override
     public BaseResponse doFail() {
 
-        return null;
+        // Do something
+
+        return new BaseResponse(DemoDubboResultCode.Y_FAILURE);
     }
 
     @Override
     public BaseResponse doException() {
 
-        if( true ) {
-            throw new BaseException("");
+        // Do something
+
+        if (true) {
+            throw new BaseException(DemoDubboResultCode.X_FAILURE);
         }
-        return null;
+        return new BaseResponse(DemoDubboResultCode.Y_FAILURE);
     }
 }

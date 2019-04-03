@@ -9,7 +9,17 @@ import lombok.Getter;
  */
 @Getter
 public class BaseException extends RuntimeException {
-    public BaseException(String msg) {
-        super(msg);
+    private String code;
+    private String systemMsg;
+    private String displayMsg;
+    private ResultCode rc;
+
+    public BaseException(ResultCode resultCode) {
+        super(resultCode.getDisplayMsg());
+
+        code = resultCode.getCode();
+        systemMsg = resultCode.getSystemMsg();
+        displayMsg = resultCode.getDisplayMsg();
+        rc = resultCode;
     }
 }
