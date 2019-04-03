@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="APP_ID" value="demo-dubbo"/>
+        <!--<Property name="LOG_PATH" value="/data/logs/${APP_ID}"/>-->
+        <Property name="LOG_PATH" value="./"/>
+        <Property name="LOG_PATTERN"
+                  value="%d{yyyy-MM-dd HH:mm:ss.SSS} %p %c [%t]: ${APP_ID} %msg %ex{separator(|)}%n"/>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="rollingFile" fileName="${LOG_PATH}/app.log" filePattern="${LOG_PATH}/app-%d{yyyyMMdd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="1GB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_PATH}" maxDepth="1">
+                    <IfFileName glob="app-*.log.gz" />
+                    <IfAccumulatedFileCount exceeds="14" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <AsyncRoot level="INFO">
+            <appender-ref ref="console"/>
+            <appender-ref ref="rollingFile"/>
+        </AsyncRoot>
+    </Loggers>
+
+</Configuration>
