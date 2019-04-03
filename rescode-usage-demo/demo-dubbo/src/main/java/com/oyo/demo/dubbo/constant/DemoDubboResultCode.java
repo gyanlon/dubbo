@@ -1,4 +1,4 @@
-package com.oyo.demo.dubbo.service.impl;
+package com.oyo.demo.dubbo.constant;
 
 import com.oyo.demo.common.ResultCode;
 import lombok.Getter;

@@ -27,7 +27,7 @@ public class DemoController {
         if (id == 1) {
             BaseResponse res = demoService.doSuccess();
 
-            // do Something to get data.
+            // Do Something to get data.
             Integer data = 1;
 
             // Populate the result

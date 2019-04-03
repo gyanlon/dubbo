@@ -3,6 +3,7 @@ package com.oyo.demo.dubbo.service.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.oyo.demo.common.BaseException;
 import com.oyo.demo.common.BaseResponse;
+import com.oyo.demo.dubbo.constant.DemoDubboResultCode;
 import com.oyo.demo.dubbo.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 
