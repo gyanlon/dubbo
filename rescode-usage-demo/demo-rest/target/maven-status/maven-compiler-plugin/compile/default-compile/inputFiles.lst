@@ -1,6 +1,6 @@
 /Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/exception/DemoExceptionHandler.java
-/Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/constant/DemoResultCode.java
 /Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/controller/DemoController.java
 /Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/controller/HeartBeatController.java
+/Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/constant/DemoRestResultCode.java
 /Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/DemoRestApplication.java
 /Users/oyo/Develop/workspace/oyo_source/dubbo/rescode-usage-demo/demo-rest/src/main/java/com/oyo/demo/rest/constant/DemoConstant.java

@@ -1,6 +1,6 @@
 com/oyo/demo/rest/controller/HeartBeatController.class
+com/oyo/demo/rest/constant/DemoRestResultCode.class
 com/oyo/demo/rest/constant/DemoConstant.class
 com/oyo/demo/rest/exception/DemoExceptionHandler.class
 com/oyo/demo/rest/controller/DemoController.class
-com/oyo/demo/rest/constant/DemoResultCode.class
 com/oyo/demo/rest/DemoRestApplication.class

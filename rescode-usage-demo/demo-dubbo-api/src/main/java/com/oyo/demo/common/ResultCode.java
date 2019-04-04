@@ -1,18 +1,19 @@
 package com.oyo.demo.common;
 
-public interface ResultCode {
+import java.io.Serializable;
+
+public interface ResultCode extends Serializable {
     String getCode();
 
     default public int getType() {
-        return ResultCodeClient.getType(getCode());
+        return MockResultCodeClient.getType(getCode());
     }
 
     default public String getSystemMsg() {
-        return ResultCodeClient.getSystemMsg(getCode());
+        return MockResultCodeClient.getSystemMsg(getCode());
     }
 
     default String getDisplayMsg() {
-        return ResultCodeClient.getSystemMsg(getCode());
+        return MockResultCodeClient.getDisplayMsg(getCode());
     }
-
 }

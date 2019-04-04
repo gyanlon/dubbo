@@ -2,17 +2,22 @@ package com.oyo.demo.common;
 
 import lombok.Getter;
 
+import java.io.Serializable;
+
 /**
  * @author Ding
  * @description
  * @date 2019-02-03
  */
 @Getter
-public class BaseException extends RuntimeException {
+public class BaseException extends RuntimeException implements Serializable {
     private String code;
     private String systemMsg;
     private String displayMsg;
     private ResultCode rc;
+
+    BaseException() {
+    }
 
     public BaseException(ResultCode resultCode) {
         super(resultCode.getDisplayMsg());

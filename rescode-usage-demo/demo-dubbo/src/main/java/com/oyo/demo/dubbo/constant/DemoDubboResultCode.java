@@ -5,9 +5,9 @@ import lombok.Getter;
 
 @Getter
 public enum DemoDubboResultCode implements ResultCode {
-    X_FAILURE("160013442", "X失败"),
-    Y_FAILURE("260121122", "Y失败"),
-    SUCCESS("360121123", "成功");
+    X_FAILURE("666666666", "X失败"),
+    Y_FAILURE("777777777", "Y失败"),
+    SUCCESS("888888888", "成功");
 
     private final String code;
     private final String msg;

@@ -13,29 +13,23 @@ import lombok.extern.slf4j.Slf4j;
 public class DemoServiceImpl implements DemoService {
 
     @Override
-    public BaseResponse doSuccess() {
+    public BaseResponse<Integer> doSomething(int i) {
 
-        // Do something
+        BaseResponse<Integer> result = null;
 
-        return new BaseResponse(DemoDubboResultCode.SUCCESS);
-    }
-
-    @Override
-    public BaseResponse doFail() {
-
-        // Do something
-
-        return new BaseResponse(DemoDubboResultCode.Y_FAILURE);
-    }
-
-    @Override
-    public BaseResponse doException() {
-
-        // Do something
-
-        if (true) {
-            throw new BaseException(DemoDubboResultCode.X_FAILURE);
+        // success
+        if( i == 1) {
+            result = new BaseResponse(1, DemoDubboResultCode.SUCCESS);
         }
-        return new BaseResponse(DemoDubboResultCode.Y_FAILURE);
+        // fail
+        else if( i == 2) {
+            result = new BaseResponse(DemoDubboResultCode.X_FAILURE);
+        }
+        // exception
+        else {
+            throw new BaseException(DemoDubboResultCode.Y_FAILURE);
+        }
+
+        return result;
     }
 }

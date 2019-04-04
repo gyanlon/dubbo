@@ -2,13 +2,17 @@ package com.oyo.demo.common;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class BaseResponse<T> {
+public class BaseResponse<T> implements java.io.Serializable {
 
     /**
-     * 状态码 （0: 未知； 1：成功； 2；错误）
+     * 状态码 （0：成功； 1；失败）
      */
-    private int status = 0;
+    //private int status = 0;
+
+    private int type;
 
     /**
      * 业务状态码
@@ -31,19 +35,18 @@ public class BaseResponse<T> {
     private T result;
 
 
-    public BaseResponse(T data, ResultCode rc) {
-        result = data;
-        init(rc);
+    BaseResponse() {
     }
 
     public BaseResponse(ResultCode rc) {
-        init(rc);
-    }
-
-    private void init(ResultCode rc) {
+        type = rc.getType();
         code = rc.getCode();
         systemMsg = rc.getSystemMsg();
         displayMsg = rc.getDisplayMsg();
-        status = rc.getType();
+    }
+
+    public BaseResponse(T data, ResultCode rc) {
+        this(rc);
+        result = data;
     }
 }
