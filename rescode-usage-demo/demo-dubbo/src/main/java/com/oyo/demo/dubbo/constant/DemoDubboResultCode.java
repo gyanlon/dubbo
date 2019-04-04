@@ -3,6 +3,8 @@ package com.oyo.demo.dubbo.constant;
 import com.oyo.demo.common.ResultCode;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Getter
 public enum DemoDubboResultCode implements ResultCode {
     X_FAILURE("666666666", "X失败"),

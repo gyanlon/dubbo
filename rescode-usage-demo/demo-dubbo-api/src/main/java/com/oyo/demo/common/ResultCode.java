@@ -2,7 +2,7 @@ package com.oyo.demo.common;
 
 import java.io.Serializable;
 
-public interface ResultCode extends Serializable {
+public interface ResultCode {
     String getCode();
 
     default public int getType() {
