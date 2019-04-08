@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>apm</groupId>
-            <artifactId>demo-mock-resdode</artifactId>
+            <artifactId>demo-mock-rescode</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>

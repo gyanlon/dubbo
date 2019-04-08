@@ -28,7 +28,7 @@ public class DemoDubboExceptionHandler {
         } catch (Exception e) {
             log.error("Handler Exception : ", e);
             Object response = handleException(e);
-            log.info("Package exception to response");
+            log.info("Pack exception to response");
             return response;
         }
     }

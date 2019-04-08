@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-mock-resdode</artifactId>
+    <artifactId>demo-mock-rescode</artifactId>
     <build>
         <plugins>
             <plugin>
