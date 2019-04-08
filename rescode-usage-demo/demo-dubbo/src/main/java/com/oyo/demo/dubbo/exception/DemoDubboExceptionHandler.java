@@ -10,13 +10,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-/**
- * 对外RPC接口全局异常处理类
- *
- * @author Ding
- * @description
- * @date 2019-02-03
- */
 @Slf4j
 @Aspect
 @Component
