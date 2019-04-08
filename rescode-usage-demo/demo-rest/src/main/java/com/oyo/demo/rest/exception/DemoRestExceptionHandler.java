@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Slf4j
 @ControllerAdvice
-public class DemoExceptionHandler {
+public class DemoRestExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
