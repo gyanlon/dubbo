@@ -2,8 +2,6 @@ package com.oyo.demo.common;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
 public class BaseResponse<T> implements java.io.Serializable {
 
@@ -48,5 +46,15 @@ public class BaseResponse<T> implements java.io.Serializable {
     public BaseResponse(T data, ResultCode rc) {
         this(rc);
         result = data;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseResponse{" +
+                "type=" + type +
+                ", code='" + code + '\'' +
+                ", systemMsg='" + systemMsg + '\'' +
+                ", displayMsg='" + displayMsg + '\'' +
+                '}';
     }
 }

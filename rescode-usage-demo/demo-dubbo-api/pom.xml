@@ -29,6 +29,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>apm</groupId>
+            <artifactId>demo-mock-framework</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

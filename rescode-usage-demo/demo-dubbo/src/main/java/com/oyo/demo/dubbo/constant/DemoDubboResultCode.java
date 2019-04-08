@@ -6,7 +6,7 @@ import lombok.Getter;
 import java.io.Serializable;
 
 @Getter
-public enum DemoDubboResultCode implements ResultCode {
+public enum DemoDubboResultCode implements ResultCode, Serializable {
     X_FAILURE("666666666", "X失败"),
     Y_FAILURE("777777777", "Y失败"),
     SUCCESS("888888888", "成功");

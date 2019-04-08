@@ -22,26 +22,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoDubboExceptionHandler {
 
-    @Pointcut("@within(com.oyo.demo.dubbo.DemoService)")
-    public void logPointCut() {
+    @Pointcut("within(com.oyo.demo.dubbo..*Service*)")
+    public void servicePointCut() {
     }
-    @Around("logPointCut()")
+
+    @Around("servicePointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
+
         try {
             Object result = point.proceed();
             return result;
         } catch (Exception e) {
-            log.error("biz service error", e);
-            return handleException(e);
+            log.error("Handler Exception : ", e);
+            Object response = handleException(e);
+            log.info("Package exception to response");
+            return response;
         }
     }
 
-    /**
-     * 处理异常
-     *
-     * @param e
-     * @return
-     */
     private Object handleException(Exception e) {
         BaseResponse baseResponse = new BaseResponse(DemoDubboResultCode.X_FAILURE);
 

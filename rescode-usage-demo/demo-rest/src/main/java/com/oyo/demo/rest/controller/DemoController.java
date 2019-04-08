@@ -67,6 +67,7 @@ public class DemoController {
 
         } else {
 
+            log.error(res.toString());
             throw new DemoRestExcepton(DemoRestResultCode.Z_FAILURE);
         }
         return result;
