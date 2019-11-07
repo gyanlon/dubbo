@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan("com.oyo.demo")
+@ComponentScan("com.gyl.demo")
 @EnableDubboConfig
 @EnableDubbo
 @SpringBootApplication

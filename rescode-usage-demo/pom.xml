@@ -21,11 +21,11 @@
     <distributionManagement>
         <repository>
             <id>maven-releases</id>
-            <url>http://nexus.infra.ahotels.tech/repository/maven-releases/</url>
+            <url>http://nexus.infra.gyl.tech/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://nexus.infra.ahotels.tech/repository/maven-snapshots/</url>
+            <url>http://nexus.infra.gyl.tech/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

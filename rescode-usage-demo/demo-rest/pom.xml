@@ -15,11 +15,11 @@
     <distributionManagement>
         <repository>
             <id>maven-releases</id>
-            <url>http://nexus.infra.ahotels.tech/repository/maven-releases/</url>
+            <url>http://nexus.infra.gyl.tech/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://nexus.infra.ahotels.tech/repository/maven-snapshots/</url>
+            <url>http://nexus.infra.gyl.tech/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -33,8 +33,8 @@
         <!--</dependency>-->
 
         <!--<dependency>-->
-            <!--<groupId>com.oyo.apm</groupId>-->
-            <!--<artifactId>oyo-apm-client</artifactId>-->
+            <!--<groupId>com.gyl.apm</groupId>-->
+            <!--<artifactId>gyl-apm-client</artifactId>-->
             <!--<version>1.0.0-SNAPSHOT</version>-->
         <!--</dependency>-->
 
@@ -116,18 +116,18 @@
         </dependency>
 
         <dependency>
-            <groupId>com.oyo.uum</groupId>
-            <artifactId>oyo-uum-api</artifactId>
+            <groupId>com.gyl.uum</groupId>
+            <artifactId>gyl-uum-api</artifactId>
             <version>1.2.1</version>
         </dependency>
         <dependency>
-            <groupId>com.oyo.uum</groupId>
-            <artifactId>oyo-uum-api</artifactId>
+            <groupId>com.gyl.uum</groupId>
+            <artifactId>gyl-uum-api</artifactId>
             <version>1.2.1</version>
         </dependency>
         <dependency>
-            <groupId>com.oyo.uum</groupId>
-            <artifactId>oyo-uum-api</artifactId>
+            <groupId>com.gyl.uum</groupId>
+            <artifactId>gyl-uum-api</artifactId>
             <version>1.2.1</version>
         </dependency>
 

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoDubboExceptionHandler {
 
-    @Pointcut("within(com.oyo.demo.dubbo..*Service*)")
+    @Pointcut("within(com.gyl.demo.dubbo..*Service*)")
     public void servicePointCut() {
     }
 

@@ -7,9 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.oyo.demo")
+@ComponentScan("com.gyl.demo")
 @EnableDubboConfig
-@EnableDubbo(scanBasePackages = "com.oyo.demo.dubbo.service.impl")
+@EnableDubbo(scanBasePackages = "com.gyl.demo.dubbo.service.impl")
 @SpringBootApplication
 @Slf4j
 public class DemoDubboApplication {
